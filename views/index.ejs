@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movielist </title>
+    <link href="styles/style.css" rel="stylesheet" >
+
+
+</head>
+<body>
+    <h1>
+movies i watched    </h1>
+        <form action="/submit"method="post">
+            <input type="text"  name="firstfilm" id="textbox">  
+
+            <input type="submit" value="ok" id="okbutton">
+
+        </form>
+        </br>
+        
+        
+      <div class="box">
+ <%if(locals.films){%>
+    <ul>
+            <% films.forEach(function(film) { %>
+
+<div id="firstbox"><li id="listoffilms"><%= film%>
+   
+</li></div>
+
+      <%  });%>
+    </ul>
+
+
+ <%}%>
+           
+        </div>
+   
+
+
+        
+        
+        
+
+</body>
+</html>
+
